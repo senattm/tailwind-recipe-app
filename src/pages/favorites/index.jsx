@@ -8,7 +8,6 @@ export default function Favorites() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <div className="container mx-auto px-4 py-8 lg:py-16">
-        
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="mb-6 text-6xl">❤️</div>
@@ -28,11 +27,12 @@ export default function Favorites() {
               <div className="inline-flex items-center bg-white rounded-2xl px-6 py-3 shadow-lg border border-orange-100">
                 <span className="text-2xl mr-2">📊</span>
                 <span className="text-gray-700 font-medium">
-                  {favoritesList.length} recipe{favoritesList.length !== 1 ? 's' : ''} saved
+                  {favoritesList.length} recipe
+                  {favoritesList.length !== 1 ? "s" : ""} saved
                 </span>
               </div>
             </div>
-            
+
             {/* Recipes Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {favoritesList.map((item, index) => (
@@ -49,9 +49,10 @@ export default function Favorites() {
                 No favorites yet
               </h3>
               <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                Start exploring recipes and add your favorites by clicking the heart button on any recipe!
+                Start exploring recipes and add your favorites by clicking the
+                heart button on any recipe!
               </p>
-              
+
               {/* Call to Action */}
               <button
                 onClick={() => navigate("home")}
@@ -59,15 +60,27 @@ export default function Favorites() {
               >
                 <span className="mr-2">🔍</span>
                 <span>Discover Recipes</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
-            
+
             {/* Tips */}
             <div className="max-w-md mx-auto">
-              <h4 className="text-lg font-semibold text-gray-700 mb-4">💡 Pro Tips</h4>
+              <h4 className="text-lg font-semibold text-gray-700 mb-4">
+                💡 Pro Tips
+              </h4>
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex items-center justify-center space-x-2">
                   <span>❤️</span>

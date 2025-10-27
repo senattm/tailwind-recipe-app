@@ -23,11 +23,9 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50 text-gray-700">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50 text-gray-700">
       <Navbar />
-      <main>
-        {renderPage()}
-      </main>
+      <main>{renderPage()}</main>
     </div>
   );
 }

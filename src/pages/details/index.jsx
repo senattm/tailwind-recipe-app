@@ -30,7 +30,8 @@ export default function Details() {
     }
   }, [id, setRecipeDetailsData]);
 
-  const isInFavorites = favoritesList &&
+  const isInFavorites =
+    favoritesList &&
     favoritesList.length > 0 &&
     favoritesList.findIndex(
       (item) => item.id === recipeDetailsData?.recipe?.id
@@ -54,21 +55,29 @@ export default function Details() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <div className="container mx-auto px-4 py-8 lg:py-16">
-        
         {/* Back Button */}
         <button
           onClick={() => navigate("home")}
           className="mb-8 inline-flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-300"
         >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
           <span className="font-medium">Back to Recipes</span>
         </button>
 
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            
             {/* Image Section */}
             <div className="relative h-64 sm:h-80 lg:h-full min-h-[400px]">
               <img
@@ -77,7 +86,7 @@ export default function Details() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              
+
               {/* Floating badge */}
               <div className="absolute top-6 left-6">
                 <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-gray-700">
@@ -88,7 +97,6 @@ export default function Details() {
 
             {/* Content Section */}
             <div className="p-8 lg:p-12">
-              
               {/* Publisher */}
               <div className="flex items-center mb-4">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
@@ -112,16 +120,16 @@ export default function Details() {
                       : "bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white focus:ring-orange-500/25 shadow-lg"
                   }`}
                 >
-                  <span className="mr-2">
-                    {isInFavorites ? "💔" : "❤️"}
-                  </span>
+                  <span className="mr-2">{isInFavorites ? "💔" : "❤️"}</span>
                   <span>
-                    {isInFavorites ? "Remove from Favorites" : "Add to Favorites"}
+                    {isInFavorites
+                      ? "Remove from Favorites"
+                      : "Add to Favorites"}
                   </span>
                 </button>
 
                 <button
-                  onClick={() => window.open(recipe.source_url, '_blank')}
+                  onClick={() => window.open(recipe.source_url, "_blank")}
                   className="inline-flex items-center px-6 py-3 rounded-2xl font-semibold bg-white border-2 border-gray-200 text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-500/25"
                 >
                   <span className="mr-2">🌐</span>
@@ -134,12 +142,16 @@ export default function Details() {
                 <div className="bg-orange-50 rounded-2xl p-4 text-center">
                   <div className="text-2xl mb-2">👥</div>
                   <div className="text-sm text-gray-600">Servings</div>
-                  <div className="text-xl font-bold text-gray-800">{recipe.servings}</div>
+                  <div className="text-xl font-bold text-gray-800">
+                    {recipe.servings}
+                  </div>
                 </div>
                 <div className="bg-red-50 rounded-2xl p-4 text-center">
                   <div className="text-2xl mb-2">⏱️</div>
                   <div className="text-sm text-gray-600">Cook Time</div>
-                  <div className="text-xl font-bold text-gray-800">{recipe.cooking_time} min</div>
+                  <div className="text-xl font-bold text-gray-800">
+                    {recipe.cooking_time} min
+                  </div>
                 </div>
               </div>
 
@@ -149,7 +161,7 @@ export default function Details() {
                   <span className="mr-3">🥄</span>
                   Ingredients
                 </h2>
-                
+
                 <div className="space-y-3">
                   {recipe.ingredients?.map((ingredient, index) => (
                     <div
