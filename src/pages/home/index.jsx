@@ -7,26 +7,10 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
-        <div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-[60vh]">
-          <div className="relative">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"></div>
-            <div className="absolute inset-0 animate-ping rounded-full h-16 w-16 border-2 border-pink-400 opacity-30"></div>
-          </div>
-          <p className="mt-6 text-xl text-gray-700 font-medium">
-            Searching for delicious recipes...
-          </p>
-          <div className="flex space-x-2 mt-4">
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
-            <div
-              className="w-2 h-2 bg-pink-500 rounded-full animate-bounce"
-              style={{ animationDelay: "0.1s" }}
-            ></div>
-            <div
-              className="w-2 h-2 bg-red-500 rounded-full animate-bounce"
-              style={{ animationDelay: "0.2s" }}
-            ></div>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-purple-500 mx-auto"></div>
+          <p className="mt-4 text-gray-700">Searching...</p>
         </div>
       </div>
     );
@@ -72,69 +56,8 @@ export default function Home() {
                 delicious recipes
               </span>{" "}
               from around the world.
-              <span className="italic">Cook, share, and enjoy!</span>
+              <span className="italic"> Cook, share, and enjoy!</span>
             </p>
-
-            <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mb-12">
-              {[
-                {
-                  emoji: "🍕",
-                  name: "Pizza",
-                  color: "from-yellow-400 to-orange-500",
-                },
-                {
-                  emoji: "🍝",
-                  name: "Pasta",
-                  color: "from-green-400 to-emerald-500",
-                },
-                {
-                  emoji: "🥗",
-                  name: "Salad",
-                  color: "from-lime-400 to-green-500",
-                },
-                {
-                  emoji: "🍰",
-                  name: "Dessert",
-                  color: "from-pink-400 to-rose-500",
-                },
-                {
-                  emoji: "🍲",
-                  name: "Soup",
-                  color: "from-amber-400 to-orange-500",
-                },
-                {
-                  emoji: "🥙",
-                  name: "Wrap",
-                  color: "from-teal-400 to-cyan-500",
-                },
-                {
-                  emoji: "🍛",
-                  name: "Curry",
-                  color: "from-red-400 to-pink-500",
-                },
-                {
-                  emoji: "🥞",
-                  name: "Pancake",
-                  color: "from-yellow-300 to-amber-400",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`group px-4 py-2.5 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 hover:border-purple-200 transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl`}
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-300">
-                      {item.emoji}
-                    </span>
-                    <span
-                      className={`text-sm font-medium bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
-                    >
-                      {item.name}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
 
             <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 max-w-2xl mx-auto border border-purple-200/30 shadow-2xl">
               <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-center">
@@ -183,11 +106,7 @@ export default function Home() {
                 <span className="font-bold text-purple-600">
                   {recipeList.length}
                 </span>{" "}
-                delicious recipes for
-                <span className="font-semibold text-pink-600">
-                  {" "}
-                  "{searchParam}"
-                </span>
+                Recipes
               </p>
             </div>
 
