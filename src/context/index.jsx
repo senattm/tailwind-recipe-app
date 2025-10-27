@@ -9,11 +9,9 @@ export default function GlobalState({ children }) {
   const [recipeDetailsData, setRecipeDetailsData] = useState(null);
   const [favoritesList, setFavoritesList] = useState([]);
 
-  // Custom routing state
   const [currentRoute, setCurrentRoute] = useState("home");
   const [routeParams, setRouteParams] = useState({});
 
-  // Custom navigation function
   const navigate = (route, params = {}) => {
     setCurrentRoute(route);
     setRouteParams(params);
@@ -34,14 +32,12 @@ export default function GlobalState({ children }) {
         navigate("home");
       }
     } catch (e) {
-      console.log(e);
       setLoading(false);
       setSearchParam("");
     }
   }
 
   function handleAddToFavorite(getCurrentItem) {
-    console.log(getCurrentItem);
     let cpyFavoritesList = [...favoritesList];
     const index = cpyFavoritesList.findIndex(
       (item) => item.id === getCurrentItem.id
@@ -55,8 +51,6 @@ export default function GlobalState({ children }) {
 
     setFavoritesList(cpyFavoritesList);
   }
-
-  console.log(favoritesList, "favoritesList");
 
   return (
     <GlobalContext.Provider

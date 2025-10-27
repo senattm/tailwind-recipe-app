@@ -55,7 +55,6 @@ export default function Details() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <div className="container mx-auto px-4 py-8 lg:py-16">
-        {/* Back Button */}
         <button
           onClick={() => navigate("home")}
           className="mb-8 inline-flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-300"
@@ -78,7 +77,6 @@ export default function Details() {
 
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Image Section */}
             <div className="relative h-64 sm:h-80 lg:h-full min-h-[400px]">
               <img
                 src={recipe.image_url}
@@ -87,7 +85,6 @@ export default function Details() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
-              {/* Floating badge */}
               <div className="absolute top-6 left-6">
                 <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-gray-700">
                   🍽️ Recipe Details
@@ -95,9 +92,7 @@ export default function Details() {
               </div>
             </div>
 
-            {/* Content Section */}
             <div className="p-8 lg:p-12">
-              {/* Publisher */}
               <div className="flex items-center mb-4">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                 <span className="text-sm font-medium text-orange-600 uppercase tracking-wide">
@@ -105,12 +100,10 @@ export default function Details() {
                 </span>
               </div>
 
-              {/* Title */}
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-tight">
                 {recipe.title}
               </h1>
 
-              {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 mb-8">
                 <button
                   onClick={() => handleAddToFavorite(recipe)}
@@ -137,7 +130,6 @@ export default function Details() {
                 </button>
               </div>
 
-              {/* Recipe Info */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-orange-50 rounded-2xl p-4 text-center">
                   <div className="text-2xl mb-2">👥</div>
@@ -155,7 +147,6 @@ export default function Details() {
                 </div>
               </div>
 
-              {/* Ingredients */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                   <span className="mr-3">🥄</span>

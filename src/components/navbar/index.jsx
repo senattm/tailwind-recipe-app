@@ -9,7 +9,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/50 shadow-sm">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={() => navigate("home")}
@@ -22,7 +21,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Search Form */}
           <div className="flex-1 max-w-lg mx-4 lg:mx-8">
             <form onSubmit={handleSubmit} className="relative">
               <div className="relative">
@@ -61,7 +59,6 @@ export default function Navbar() {
             </form>
           </div>
 
-          {/* Navigation Links */}
           <nav className="flex items-center space-x-1">
             <button
               onClick={() => navigate("home")}
@@ -89,7 +86,6 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Search (shown on small screens) */}
         <div className="lg:hidden pb-4">
           <form onSubmit={handleSubmit} className="relative">
             <div className="relative">

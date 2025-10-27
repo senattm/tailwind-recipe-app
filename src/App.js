@@ -5,7 +5,6 @@ import Details from "./pages/details";
 import GlobalState, { GlobalContext } from "./context";
 import { useContext } from "react";
 
-// Component to handle routing logic
 function AppContent() {
   const { currentRoute } = useContext(GlobalContext);
 
